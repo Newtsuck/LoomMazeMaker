@@ -51,7 +51,6 @@ package utils
 		{
 			this._width = this.checkDimension(w);
 			this._height = this.checkDimension(h);
-			this._vect = new Vector.<MazeUnitData>(this._width * this._height);
 			
 			this.randomSelectionIndexes = new Vector.<Number>;
 			
@@ -73,6 +72,7 @@ package utils
 			if (h != null) this._height = this.checkDimension(h);
 			
 			// Instantiate all of the maze units
+			this._vect = new Vector.<MazeUnitData>(this._width * this._height);
 			var xCount:Number, yCount:Number = 0;
 			for (var i = 0; i < this._vect.length; i++)
 			{
